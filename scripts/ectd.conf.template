@@ -1,0 +1,11 @@
+#[Member]
+ETCD_DATA_DIR="/var/lib/etcd/default.etcd"
+ETCD_LISTEN_PEER_URLS="http://0.0.0.0:2380"
+ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379,http://0.0.0.0:4001"
+ETCD_NAME="host-10-0-0-10"
+#[Clustering]
+ETCD_INITIAL_ADVERTISE_PEER_URLS="http://host-10-0-0-10:2380"
+ETCD_ADVERTISE_CLIENT_URLS="http://host-10-0-0-10:2379,http://host-10-0-0-10:4001"
+ETCD_INITIAL_CLUSTER="host-10-0-0-10=http://host-10-0-0-10:2380,host-10-0-0-33=http://host-10-0-0-33:2380,host-10-0-0-30=http://host-10-0-0-30:2380"
+ETCD_INITIAL_CLUSTER_TOKEN="etcd-cluster"
+ETCD_INITIAL_CLUSTER_STATE="new"
